@@ -12,7 +12,7 @@
 
 body{
 
-   background-color: #1f1e1e;
+   background-color: #EAE3D2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,11 +21,10 @@ body{
 }
 .quizBox{
     width: 400px;
-    background-color:whitesmoke ;
+    background-color:#ffffff ;
     border-radius: 0.3em;
     overflow: hidden;
-    box-shadow: 11px 10px 10px;
-    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
 }
 header{
     padding: 1.5em;
@@ -43,10 +42,11 @@ h2{
     width: 100%;
     padding: 1.1em;
     border: none;
-    background-color:#5C2E7E ;
+    background-color:#EF5B0C ;
     font-size: 1.1em;
     font-weight: bold;
     cursor: pointer;
+    color: #ffffff;
 }
 
 #next:hover{
