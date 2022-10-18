@@ -99,14 +99,17 @@ const ans_D = document.getElementById("d");
 let answersEl = document.querySelectorAll(".answer");
 
 
+function uncheck(){
+    answersEl.forEach((answerEl) => {
+        answerEl.checked = false;
 
+    });
+}
 function setQuiz(){
 
     // this part to remove checked mark from input radio
-    answersEl.forEach((answerEl) => {
-        answerEl.checked = false;
-    });
-
+    
+        uncheck();
     //--------------------------------------------------
 
     // this part to set the question and answer
@@ -122,16 +125,30 @@ function getAns(){
     answersEl.forEach((answerEl) => {
         if(answerEl.checked){
             answer = answerEl.id;
+
         }
+        
     });
     return answer;
 }
+
+    
+
+
+
+
+
+   
+
+   
+
 
 //---------------------------------------------------------------
 // here we statr
 setQuiz();
 next.addEventListener("click" , () => {
     let answer = getAns();
+    // console.log(answer);
     if(answer){ // check if the user chosse answer
         if(answer === quizData[currentQuestion].correct){ //check if corecct increace score
             score++;
@@ -144,4 +161,10 @@ next.addEventListener("click" , () => {
         result.innerHTML = `<div class = "result"><h1>YOUR score ${score} / ${quizData.length}</h1></div>` // print result
         }
     }
-});
+    console.log(answersEl.checked);
+       let vip= document.getElementById("quizBox");
+       vip.classList.toggle("error") 
+    
+    
+		});
+       
